@@ -4,9 +4,9 @@ import heroImg from "@/assets/hero-celebration.png";
 import { Sparkles, MessageCircle, Calendar, ChevronDown } from "lucide-react";
 import SparkleCanvas from "./SparkleCanvas";
 
-// WhatsApp configuration (same as navbar)
+// WhatsApp configuration
 const WHATSAPP_NUMBER = "919876543210"; // Replace with your actual WhatsApp number
-const WHATSAPP_MESSAGE = "Hello! I'm interested in your event decoration services for an upcoming celebration.";
+const WHATSAPP_MESSAGE = "Hello Advika Celebrations! I'm interested in your event decoration services. Can you please share more details?";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,101 +27,76 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative gradient-hero min-h-screen flex items-center overflow-hidden pt-24"
+      className="relative min-h-screen flex items-center overflow-hidden pt-16 sm:pt-20 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-50"
     >
       <SparkleCanvas />
 
-      {/* Enhanced bokeh circles with animation */}
-      <div className="absolute top-20 left-[5%] w-40 h-40 rounded-full bg-amber-300/10 blur-3xl animate-float-slow" />
-      <div className="absolute top-60 right-[10%] w-60 h-60 rounded-full bg-purple-300/10 blur-3xl animate-float-slower" style={{ animationDelay: "1s" }} />
-      <div className="absolute bottom-32 left-[20%] w-32 h-32 rounded-full bg-pink-300/10 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-      <div className="absolute top-[30%] right-[25%] w-24 h-24 rounded-full bg-blue-300/10 blur-2xl animate-pulse-glow" />
-      
       {/* Decorative elements */}
-      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
+      <div className="absolute top-20 left-[5%] w-20 h-20 sm:w-32 sm:h-32 rounded-full bg-amber-200/40 blur-2xl sm:blur-3xl animate-float-slow" />
+      <div className="absolute top-40 right-[5%] w-24 h-24 sm:w-48 sm:h-48 rounded-full bg-orange-200/40 blur-2xl sm:blur-3xl animate-float-slower hidden sm:block" />
+      <div className="absolute bottom-20 left-[10%] w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-amber-100/60 blur-3xl animate-float-slower" />
       
-      {/* Floating particles */}
-      <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/30 rounded-full animate-ping" />
-      <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-amber-400/30 rounded-full animate-ping" style={{ animationDelay: "0.5s" }} />
-
-      <div className="container mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
         {/* Text Content */}
         <div
-          className={`space-y-8 transform transition-all duration-1000 ${
+          className={`space-y-4 sm:space-y-6 lg:space-y-8 transform transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          } order-2 lg:order-1`}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-lg hover:shadow-amber-500/20 transition-all duration-300 hover:scale-105 group">
-            <Sparkles className="w-4 h-4 text-amber-400 animate-sparkle" />
-            <span className="text-sm font-medium text-white">
-              ✨ Event Decoration Specialists
+          <div className="inline-flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-amber-200 shadow-lg">
+            <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-amber-500 animate-sparkle" />
+            <span className="text-xs sm:text-sm font-medium text-gray-700">
+              ✨ Event Decor Specialists
             </span>
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse ml-2" />
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse ml-1 sm:ml-2" />
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-            <span className="text-white drop-shadow-lg">Turning Moments into</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+            <span className="text-gray-800 drop-shadow-sm">Turning Moments</span>
             <br />
-            <span className="bg-gradient-to-r from-amber-300 via-orange-300 to-amber-300 bg-clip-text text-transparent animate-gradient-x">
-              Magical Memories
+            <span className="bg-gradient-to-r from-amber-600 via-orange-500 to-amber-600 bg-clip-text text-transparent animate-gradient-x">
+              into Magic
             </span>
           </h1>
 
           {/* Description */}
-          <p className="text-lg text-white/80 max-w-lg leading-relaxed backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
-            ✨ From intimate birthdays to grand celebrations, we design events that are elegant, creative, and truly unforgettable.
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-lg leading-relaxed bg-white/80 backdrop-blur-sm p-4 sm:p-5 lg:p-6 rounded-xl sm:rounded-2xl border border-amber-100 shadow-md">
+            ✨ From intimate birthdays to grand celebrations, we design events that are elegant and unforgettable.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4">
-            {/* WhatsApp Button */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <button
               onClick={openWhatsApp}
-              className="group relative flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 overflow-hidden"
+              className="group relative flex items-center justify-center gap-2 sm:gap-3 bg-gradient-to-r from-green-600 to-green-700 text-white px-5 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 rounded-full text-sm sm:text-base lg:text-lg font-semibold shadow-xl hover:shadow-green-600/30 hover:scale-105 active:scale-95 transition-all duration-300 w-full sm:w-auto"
             >
-              <MessageCircle className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-              <span>Chat on WhatsApp</span>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span>WhatsApp</span>
+              <span className="text-[10px] sm:text-xs bg-white/30 px-2 py-0.5 rounded-full">24/7</span>
             </button>
 
-            {/* Book Now Button */}
             <button
               onClick={() => scrollTo("#contact")}
-              className="group relative bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:shadow-amber-500/30 hover:scale-105 transition-all duration-300 overflow-hidden animate-glow-pulse"
+              className="group relative bg-gradient-to-r from-amber-600 via-orange-600 to-amber-600 text-white px-5 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 rounded-full text-sm sm:text-base lg:text-lg font-semibold shadow-xl hover:shadow-amber-600/30 hover:scale-105 active:scale-95 transition-all duration-300 w-full sm:w-auto"
             >
-              <span className="relative z-10 flex items-center gap-2">
-                <Calendar className="w-5 h-5" />
-                Book Your Celebration
+              <span className="relative z-10 flex items-center justify-center gap-1 sm:gap-2">
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>Book Now</span>
               </span>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            </button>
-
-            {/* Services Button */}
-            <button
-              onClick={() => scrollTo("#services")}
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:scale-105 flex items-center gap-2"
-            >
-              Our Services
-              <ChevronDown className="w-4 h-4 animate-bounce" />
             </button>
           </div>
 
-          {/* Stats/Trust Indicators */}
-          <div className="flex gap-8 pt-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white">500+</div>
-              <div className="text-sm text-white/60">Events Decorated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white">100%</div>
-              <div className="text-sm text-white/60">Happy Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white">24/7</div>
-              <div className="text-sm text-white/60">Support</div>
-            </div>
+          {/* Services Button */}
+          <div className="flex justify-center sm:justify-start">
+            <button
+              onClick={() => scrollTo("#services")}
+              className="border-2 border-amber-300 text-gray-700 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:bg-amber-50 backdrop-blur-sm transition-all duration-300 flex items-center gap-2 hover:border-amber-400 group"
+            >
+              Our Services
+              <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4 animate-bounce group-hover:text-amber-600" />
+            </button>
           </div>
         </div>
 
@@ -129,52 +104,41 @@ const HeroSection = () => {
         <div
           className={`relative transform transition-all duration-1000 delay-300 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          } order-1 lg:order-2`}
         >
-          {/* Floating animation container */}
-          <div className="relative animate-float-slow">
-            {/* Logo with enhanced styling */}
-            <div className="relative mb-8 group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="relative">
+            {/* Logo */}
+            <div className="relative mb-4 sm:mb-6 lg:mb-8 group flex justify-center">
+              <div className="absolute -inset-2 sm:-inset-3 lg:-inset-4 bg-gradient-to-r from-amber-400 to-orange-400 rounded-2xl sm:rounded-3xl blur-xl opacity-60" />
               <img
                 src={advikaLogo}
                 alt="Advika Celebrations Logo"
-                className="relative w-64 md:w-72 lg:w-80 mx-auto rounded-3xl shadow-2xl ring-2 ring-white/20 group-hover:ring-white/40 transition-all duration-500"
+                className="relative w-32 xs:w-40 sm:w-48 md:w-56 lg:w-64 xl:w-72 mx-auto rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-2xl ring-4 ring-white/60"
               />
             </div>
 
-            {/* Hero Image with floating badges */}
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-magic rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
+            {/* Hero Image */}
+            <div className="relative group flex justify-center">
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-orange-400 rounded-2xl sm:rounded-3xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity" />
               <img
                 src={heroImg}
-                alt="Beautiful event decorations with balloons, gifts, and confetti"
-                className="relative w-full max-w-sm mx-auto rounded-3xl shadow-2xl border-2 border-white/20 group-hover:border-white/40 transition-all duration-500 group-hover:scale-[1.02]"
+                alt="Event decorations"
+                className="relative w-48 xs:w-56 sm:w-64 md:w-72 lg:w-80 xl:w-96 mx-auto rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-2xl border-4 border-white/60 group-hover:scale-105 transition-transform duration-500"
               />
               
               {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 bg-gradient-magic text-white px-4 py-2 rounded-full text-sm font-semibold shadow-xl animate-float">
-                ✨ Premium Quality
+              <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 lg:-top-4 lg:-right-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-2 sm:px-3 lg:px-4 py-1 sm:py-1.5 lg:py-2 rounded-full text-[10px] sm:text-xs lg:text-sm font-semibold shadow-xl animate-float hover:scale-110 transition-transform">
+                ✨ Premium
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-xl animate-float" style={{ animationDelay: "1s" }}>
-                ⚡ Instant Quote
+              <div className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 lg:-bottom-4 lg:-left-4 bg-gradient-to-r from-green-600 to-green-700 text-white px-2 sm:px-3 lg:px-4 py-1 sm:py-1.5 lg:py-2 rounded-full text-[10px] sm:text-xs lg:text-sm font-semibold shadow-xl animate-float hover:scale-110 transition-transform" style={{ animationDelay: "1s" }}>
+                ⚡ Instant
               </div>
             </div>
 
-            {/* Enhanced glow effects */}
-            <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-amber-500/20 rounded-full blur-3xl animate-pulse-glow" />
+            {/* Glow effect */}
+            <div className="absolute -bottom-6 sm:-bottom-8 lg:-bottom-12 left-1/2 -translate-x-1/2 w-3/4 h-8 sm:h-12 lg:h-16 bg-gradient-to-r from-amber-400/30 via-orange-400/30 to-amber-400/30 rounded-full blur-2xl sm:blur-3xl" />
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <button
-          onClick={() => scrollTo("#services")}
-          className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all duration-300 group"
-        >
-          <ChevronDown className="w-5 h-5 text-white/60 group-hover:text-white" />
-        </button>
       </div>
     </section>
   );

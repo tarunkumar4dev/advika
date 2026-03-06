@@ -5,7 +5,7 @@ import { Sparkles, MessageCircle, Calendar, ChevronDown } from "lucide-react";
 import SparkleCanvas from "./SparkleCanvas";
 
 // WhatsApp configuration
-const WHATSAPP_NUMBER = "8882426158"; // Replace with your actual WhatsApp number
+const WHATSAPP_NUMBER = "918882426158"; // Replace with your actual WhatsApp number
 const WHATSAPP_MESSAGE = "Hello Advika Celebrations! I'm interested in your event decoration services. Can you please share more details?";
 
 const HeroSection = () => {

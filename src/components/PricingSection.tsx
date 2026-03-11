@@ -4,21 +4,21 @@ import SparkleCanvas from "./SparkleCanvas";
 const packages = [
   {
     name: "Basic Balloon Setup",
-    price: "₹1,500 – ₹2,000",
+    price: "NA",
     icon: Star,
     features: ["Simple balloon arrangement", "Color coordination", "Setup & cleanup included"],
     popular: false,
   },
   {
     name: "Medium Decoration",
-    price: "₹2,500 – ₹4,000",
+    price: "NA",
     icon: Crown,
     features: ["Themed balloon decor", "Backdrop setup", "Photo-ready arrangements", "Color coordination"],
     popular: true,
   },
   {
     name: "Premium Setup",
-    price: "₹5,000+",
+    price: "NA",
     icon: Crown,
     features: ["Full event decoration", "Custom themes & backdrops", "Flower & balloon combos", "Personal photo integration", "Premium materials"],
     popular: false,

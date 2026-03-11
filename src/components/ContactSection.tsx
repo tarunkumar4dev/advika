@@ -22,9 +22,9 @@ const ContactSection = () => {
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             {[
-              { icon: Phone, title: "Phone", value: "+91 XXXXX XXXXX" },
+              { icon: Phone, title: "Phone", value: "+91 88824 26158" },
               { icon: Mail, title: "Email", value: "hello@advikacelebrations.com" },
-              { icon: MapPin, title: "Location", value: "Your City, India" },
+              { icon: MapPin, title: "Location", value: "Dwarka, Delhi" },
             ].map((item) => (
               <div key={item.title} className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-primary-foreground/15 backdrop-blur-sm flex items-center justify-center flex-shrink-0 border border-primary-foreground/20">
